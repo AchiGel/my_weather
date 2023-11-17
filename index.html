@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Weather</title>
+    <link rel="shortcut icon" href="./assets/Sun.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Weather</h1>
+      <input type="text" placeholder="Search location..." />
+      <div class="weather-Card">
+        <div class="city-info">
+          <h3 class="city"></h3>
+          <img src="./assets/🦆 icon _location_.svg" alt="" />
+        </div>
+
+        <div class="temperature">
+          <img src="./assets/🦆 icon _temperature_.svg" alt="" />
+          <h2><span id="temp"></span>°C</h2>
+          <img id="img" src="" alt="" />
+        </div>
+        <div class="date">Last Updated: <span></span></div>
+        <div class="parameters">
+          <div class="para-1">
+            <h4>Humidity</h4>
+            <p><span></span>%</p>
+          </div>
+          <div class="para-2">
+            <h4>Visiblity</h4>
+            <p><span></span>km</p>
+          </div>
+          <div class="para-3">
+            <h4>Air Pressure</h4>
+            <p><span></span>hPa</p>
+          </div>
+          <div class="para-4">
+            <h4>Wind</h4>
+            <p><span></span>kph</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
