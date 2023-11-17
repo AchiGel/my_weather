@@ -7,13 +7,13 @@ const visiblity = document.querySelector(".para-2 p span");
 const airPressure = document.querySelector(".para-3 p span");
 const wind = document.querySelector(".para-4 p span");
 
-const fetchinData = fetch(
-  "http://api.weatherapi.com/v1/current.json?key=bf46b793c4064945b8c100432231711&q=Tbilisi&aqi=no"
-)
-  .then((data) => data.json())
-  .then((json) => json);
-
 async function changeParameters() {
+  const fetchinData = await fetch(
+    "https://api.weatherapi.com/v1/current.json?key=bf46b793c4064945b8c100432231711&q=Tbilisi&aqi=no"
+  )
+    .then((data) => data.json())
+    .then((json) => json);
+
   const data = await fetchinData;
   city.textContent = data.location.name;
   currentTemp.textContent = data.current.temp_c;
