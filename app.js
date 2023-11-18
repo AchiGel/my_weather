@@ -8,16 +8,13 @@ const airPressure = document.querySelector(".para-3 p span");
 const wind = document.querySelector(".para-4 p span");
 
 async function changeParameters() {
-  const fetchinData = await fetch(
+  const response = await fetch(
     "https://api.weatherapi.com/v1/current.json?key=bf46b793c4064945b8c100432231711&q=Tbilisi&aqi=no"
-  )
-    .then((data) => data.json())
-    .then((json) => json);
-
-  const data = await fetchinData;
+  );
+  const data = await response.json();
   city.textContent = data.location.name;
   currentTemp.textContent = data.current.temp_c;
-  tempImg.src = "http:" + data.current.condition.icon;
+  tempImg.src = data.current.condition.icon;
   date.textContent = data.current.last_updated;
   humidity.textContent = data.current.humidity;
   visiblity.textContent = data.current.vis_km;
